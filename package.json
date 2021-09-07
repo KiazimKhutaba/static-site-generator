@@ -1,0 +1,21 @@
+{
+    "name": "static-site-generator",
+    "version": "1.0.0",
+    "main": "index.js",
+    "description": "Simple static site generator using Parcel bundler",
+    "keywords": ["site","static generator", "static site", "parcel generator"],
+    "license": "MIT",
+    "scripts": {
+        "dev": "rm -rf ./.cache && rm -rf ./dist && npx parcel src/templates/index.njk",
+        "build": "rm -rf ./.cache && rm -rf ./dist && npx parcel build src/templates/*.njk"
+    },
+    "devDependencies": {
+        "@types/node": "^14.0.13",
+        "@types/nunjucks": "^3.1.3",
+        "nunjucks": "3.0",
+        "parcel-bundler": "^1.12.4",
+        "parcel-plugin-nunjucks": "^2.2.1",
+        "sass": "^1.26.8",
+        "typescript": "^3.9.5"
+    }
+}
